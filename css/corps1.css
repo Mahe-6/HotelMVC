@@ -1,0 +1,265 @@
+@CHARSET "UTF-8";
+
+
+#tagService,
+#tagFood {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+    padding: 0;
+    list-style: none;
+}
+
+li.tag {
+    list-style: none;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+
+    background: rgba(201,168,76,0.08);
+    border: 0.5px solid rgba(201,168,76,0.30);
+    border-radius: 999px;
+    color: #7a5c15;
+
+    cursor: default;
+}
+
+li.tag:hover {
+    background: rgba(201,168,76,0.18);
+    transform: translateY(-1px);
+}
+
+span.tag {
+    color: #c9a84c;
+    font-weight: 700;
+    margin-right: 1px;
+}
+
+
+#corps::after,
+.cards-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.card {
+    width: calc(33.33% - 24px);
+    min-width: 260px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(26,18,9,0.07);
+    border: 0.5px solid rgba(201,168,76,0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    float: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+div.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(26,18,9,0.13);
+    border-color: rgba(201,168,76,0.45);
+}
+
+div.photoCard {
+    overflow: hidden;
+    height: 200px;
+    background: #261b0d;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+div.photoCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+div.card:hover div.photoCard img {
+    transform: scale(1.06);
+}
+
+div.descrCard {
+    padding: 16px 18px 10px 18px;
+    font-size: 14px;
+    color: #1c1410;
+    flex: 1;
+}
+
+div.descrCard a {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1c1410;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+div.descrCard a:hover {
+    color: #8a6a1a;
+}
+
+div.descrCard br + * ,
+div.descrCard {
+    color: #7a6a55;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+div.tagCard {
+    padding: 10px 18px 14px 18px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-top: 0.5px solid rgba(201,168,76,0.10);
+    margin-top: 4px;
+}
+
+#listChambres {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#listChambres li.card {
+    width: 100%;
+    float: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 0.5px solid rgba(201,168,76,0.15);
+    box-shadow: none;
+    margin: 0;
+}
+
+#listChambres li.card:first-child {
+    border-radius: 10px 10px 0 0;
+    border-top: 0.5px solid rgba(201,168,76,0.20);
+    border-left: 0.5px solid rgba(201,168,76,0.20);
+    border-right: 0.5px solid rgba(201,168,76,0.20);
+}
+
+#listChambres li.card:last-child {
+    border-radius: 0 0 10px 10px;
+    border-left: 0.5px solid rgba(201,168,76,0.20);
+    border-right: 0.5px solid rgba(201,168,76,0.20);
+    border-bottom: 0.5px solid rgba(201,168,76,0.20);
+}
+
+#listChambres li.card:hover {
+    transform: none;
+    background: rgba(201,168,76,0.04);
+}
+
+#galerie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 24px 0;
+    padding: 0;
+    list-style: none;
+}
+
+img.galerie {
+    width: 130px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(201,168,76,0.20);
+    box-shadow: 0 4px 12px rgba(26,18,9,0.08);
+}
+
+img.galerie:hover {
+    transform: scale(1.05);
+    border-color: rgba(201,168,76,0.50);
+}
+
+#note {
+    display: inline-flex;
+    gap: 2px;
+    margin-bottom: 16px;
+    vertical-align: middle;
+}
+
+img.note {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+img.aimer {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.aimer:hover {
+    transform: scale(1.20);
+}
+
+#principal img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201,168,76,0.15);
+}
+
+#critiques {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#critiques > li {
+    background: #faf8f4;
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 0.5px solid rgba(201,168,76,0.18);
+}
+
+#critiques > li:hover {
+    border-color: rgba(201,168,76,0.40);
+    background: #fff;
+}
+
+#critiques > li > span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7a5c15;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+#critiques > li > div {
+    font-size: 14px;
+    color: #1c1410;
+}
+
+#tagFood {
+    margin-top: 8px;
+}
